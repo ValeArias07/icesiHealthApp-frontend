@@ -12,10 +12,10 @@ RUN apk add git
 WORKDIR /usr
 
 # Clone repo
-RUN git clone https://github.com/ValeArias07/icesiHealthApp-backend
+RUN git clone https://github.com/ValeArias07/icesiHealthApp-frontend
 
 # Set workdir
-WORKDIR /usr/icesiHealthApp-backend/
+WORKDIR /usr/icesiHealthApp-frontend/
 
 # Add env vars
 ENV PORT 3000

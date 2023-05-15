@@ -5,7 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "verify": "sonarqube-verify"
+    "test": "mocha test/",
+    "test:awesome": "mocha --reporter mochawesome || true",
+    "open:report": "open mochawesome-report/mochawesome.html",
+    "sonar": "node sonar-project.js",
+    "coverage": "nyc --reporter=lcov npm run test",
+    "coverage-lcov": "./node_modules/.bin/nyc -r cobertura -r text-summary -r lcov npm test",
+    "build": "webpack -p",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
     "type": "git",
@@ -28,6 +35,10 @@
     "node": "8.x"
   },
   "devDependencies": {
-    "sonarqube-verify": "^1.0.2"
+    "sonarqube-verify": "^1.0.2",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.1.0",
+    "nyc": "^15.1.0"
   }
 }

@@ -1,0 +1,6 @@
+projectKey=nodejs-patientdb-cloudant
+serverUrl=http://20.169.198.136:9000
+serverVersion=8.2.0.32929
+dashboardUrl=http://20.169.198.136:9000/dashboard?id=nodejs-patientdb-cloudant
+ceTaskId=AYffQ2lsw1dynoASxt9K
+ceTaskUrl=http://20.169.198.136:9000/api/ce/task?id=AYffQ2lsw1dynoASxt9K

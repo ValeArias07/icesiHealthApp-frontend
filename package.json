@@ -1,10 +1,11 @@
 {
-  "name": "Example",
+  "name": "nodejs-patientdb-cloudant",
   "version": "1.0.0",
   "description": "Example health prototype",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "verify": "sonarqube-verify"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
   },
   "engines": {
     "node": "8.x"
+  },
+  "devDependencies": {
+    "sonarqube-verify": "^1.0.2"
   }
 }

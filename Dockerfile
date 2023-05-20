@@ -17,6 +17,7 @@ RUN git clone https://github.com/ValeArias07/icesiHealthApp-frontend
 # Set workdir
 WORKDIR /usr/icesiHealthApp-frontend/
 
+RUN cat public/login.html
 # Add env vars
 ENV PORT 3000
 EXPOSE $PORT

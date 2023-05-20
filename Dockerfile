@@ -36,4 +36,4 @@ RUN npm install express@4.18.2
 RUN npm install cors@2.8.5
 
 # Entrypoint
-CMD ["node", "index.js"]
+CMD ["node", "app.js"]

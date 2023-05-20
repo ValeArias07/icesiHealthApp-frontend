@@ -15,7 +15,7 @@ WORKDIR /usr
 RUN git clone https://github.com/ValeArias07/icesiHealthApp-frontend
 
 # Set workdir
-WORKDIR /icesiHealthApp-frontend/
+WORKDIR /usr/icesiHealthApp-frontend/
 
 # Add env vars
 ENV PORT 3000

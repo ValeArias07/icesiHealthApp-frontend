@@ -43,38 +43,25 @@ function field_blur(field, email) {
 
 function login() {
   console.log("In login");
-
-
-
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
   
   if (mode != 1) {
 
-    var url = "./login/user";
+    var url = "./login";
     var params = "username=" + username + "&password=" + password;
-
-    var http = new XMLHttpRequest();
-    console.log("a esto va a hacerle open"+url+ "?");
-    http.open("POST", url + "?" + params, true);
-    console.log(params);
-    http.onreadystatechange = function() {
-      if (http.readyState == 4 && http.status == 200) {
-        console.log("antes de parsear");
-        console.log(http);
-        console.log("=== "+JSON.parse(http.responseText));
-        console.log("=== "+http);
-        var patientid = http.responseText;
-        console.log("despues de parsear")
+    var API_URL = process.env.API_URL 
+    var patientLogin = backendApi.patientLogin(API_URL, username, password);
+    console.log(patientLogin);
+      if (patientLogin!='undefined') {
+        var patientid = patientLogin;
         if (patientid) {
           console.log("entro a almacenar paciente")
           sessionStorage.setItem("patientid", patientid);
           sessionStorage.setItem("patientusername", username);
         }
-
         window.location = '/';
         return;
-      }
     }
     http.send(null);
   } else {

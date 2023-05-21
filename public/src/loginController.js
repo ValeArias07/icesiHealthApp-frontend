@@ -61,8 +61,8 @@ function login() {
     http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         console.log("antes de parsear");
-	console.log("=== "+http.responseText);
-	var patientid = http.responseText;
+        console.log("=== "+http.responseText);
+        var patientid = username;
         console.log("despues de parsear")
         if (patientid) {
           console.log("entro a almacenar paciente")

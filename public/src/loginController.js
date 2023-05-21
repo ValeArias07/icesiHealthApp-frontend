@@ -61,7 +61,8 @@ function login() {
     http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         console.log("antes de parsear");
-        console.log("=== "+http.response);
+        console.log(http);
+        console.log("=== "+JSON.parse(http.responseText));
         console.log("=== "+http);
         var patientid = http.responseText;
         console.log("despues de parsear")

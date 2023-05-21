@@ -8,7 +8,7 @@ function retrievePatientInformation() {
     return;
   }
 
-  var url = "./info";
+  var url = "/info";
   var params = "id=" + sessionStorage.getItem("patientid");
   console.log("esto es params de information "+params)
   var http = new XMLHttpRequest();

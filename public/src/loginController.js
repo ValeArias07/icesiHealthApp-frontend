@@ -51,7 +51,7 @@ function login() {
   
   if (mode != 1) {
 
-    var url = "./login";
+    var url = "./login/user";
     var params = "username=" + username + "&password=" + password;
 
     var http = new XMLHttpRequest();

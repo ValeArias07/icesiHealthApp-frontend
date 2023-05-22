@@ -20,7 +20,8 @@ WORKDIR /usr/icesiHealthApp-frontend/
 
 RUN git log
 # Add env vars
-ENV PORT 3000
+ARG ARG_PORT
+ENV PORT $ARG_PORT
 EXPOSE $PORT
 
 # Update npm version and install dependencies

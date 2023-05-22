@@ -11,8 +11,9 @@ RUN apk add git
 # Set workdir
 WORKDIR /usr
 
+ARG REPOSITORY
 # Clone repo
-RUN git clone https://github.com/ValeArias07/icesiHealthApp-frontend
+RUN git clone $REPOSITORY
 
 # Set workdir
 WORKDIR /usr/icesiHealthApp-frontend/

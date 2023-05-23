@@ -21,6 +21,8 @@ WORKDIR /usr/icesiHealthApp-frontend/
 RUN git log
 # Add env vars
 ARG ARG_PORT
+ARG ARG_API_URL
+ENV API_URL $ARG_API_URL
 ENV PORT $ARG_PORT
 EXPOSE $PORT
 
